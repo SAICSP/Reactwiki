@@ -9,23 +9,32 @@ nav {
 /* Centering the search input and button */
 .search form {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    /* Stack elements vertically on mobile */
     align-items: center;
     width: 100%;
 }
 
 /* Adjustments for the input and button to look balanced */
 .search form input {
-    width: 300px;
-    /* Set a fixed width for the search input */
-    margin-right: 10px;
+    width: 80%;
+    /* Use a percentage for responsiveness */
+    max-width: 300px;
+    /* Set a max-width for larger screens */
+    margin: 10px 0;
     /* Add space between input and button */
 }
 
 .searchBtn {
-    margin-left: 10px;
+    margin-left: 0;
+    /* Remove left margin on mobile */
+    width: 80%;
+    /* Make button width responsive */
+    max-width: 150px;
+    /* Set a max-width for the button */
 }
 
+/* Headings */
 h1,
 h3 {
     font-family: "Sedan SC", serif;
@@ -34,13 +43,18 @@ h3 {
     /* Center the headings */
 }
 
-/* Add some margin to adjust the overall appearance */
+/* Center the image */
 #mainimg {
     display: block;
+    width: 100%;
+    /* Make image responsive */
+    max-width: 400px;
+    /* Set a max-width for larger screens */
     margin: 2rem auto;
     /* Center the image horizontally */
 }
 
+/* Search results transition */
 #searchResults {
     opacity: 0;
     transform: translateY(20px);
@@ -51,4 +65,45 @@ h3 {
 #searchResults.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 600px) {
+    .search form {
+        flex-direction: column;
+        /* Stack elements */
+    }
+
+    .search form input,
+    .searchBtn {
+        width: 90%;
+        /* Make input and button wider */
+        margin: 10px 0;
+        /* Space between stacked elements */
+    }
+
+    #mainimg {
+        max-width: 50%;
+        /* Make image fill the screen */
+        margin-left: 100px !important;
+        /* Align image to the left */
+        margin-right: auto;
+        /* Adjust margin to fill space */
+        display: block;
+        /* Ensure block display */
+    }
+}
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    /* Stack vertically on mobile */
+    align-items: center;
+    /* Center items */
+}
+
+@media (min-width: 601px) {
+    .hero-container {
+        flex-direction: row;
+        /* Arrange side by side on larger screens */
+    }
 }

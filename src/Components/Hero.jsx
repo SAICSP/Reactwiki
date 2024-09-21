@@ -67,41 +67,40 @@ function Hero() {
         <>
             <h1 className='mt-5 text-center'>Wikipedia</h1>
             <h3 className='mt-2 text-center'>The Free Encyclopedia</h3>
-            <Editor />
+              <div className="hero-container">
             <img 
                 src="/project.jfif" 
                 alt="wikipedia globe image" 
                 id="mainimg" 
                 className='mb-5 mt-5' 
-                style={{ width: "20%", marginLeft: "30rem" }} 
+                style={{marginLeft:"500px",height:"200px",width:"200px"}}
             />
+            <Editor />
+        </div>
             
             <div className="search">
-                <nav className="navbar navbar-expand-lg">
-                    <form className="d-flex" role="search" onSubmit={handleSearch}>
-                        <input
-                            className="form-control me-2"
-                            id="searchInput"
-                            type="search"
-                            placeholder="Search on Wikipedia"
-                            aria-label="Search"
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                        />
-                        <div id="google_translate_element"></div>
-                        <button type="submit" className="btn btn-primary searchBtn">
-                            <i className="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                    </form>
-                </nav>
+    <nav className="navbar navbar-expand-lg">
+        <form className="d-flex" role="search" onSubmit={handleSearch}>
+            <input
+                className="form-control me-2"
+                id="searchInput"
+                type="search"
+                placeholder="Search on Wikipedia"
+                aria-label="Search"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <div id="google_translate_element"></div>
+            <button type="submit" className="btn btn-primary searchBtn">
+                <i className="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+    </nav>
+    <div id="searchResults" className={`mt-4 mb-5 ${showResults ? 'show' : ''}`}>
+        {searchResults}
+    </div>
+</div>
 
-                <div 
-                    id="searchResults" 
-                    className={`mt-4 mb-5 ${showResults ? 'show' : ''}`} // Add 'show' class based on showResults state
-                >
-                    {searchResults}
-                </div>
-            </div>
         </>
     );
 }
