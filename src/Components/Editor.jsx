@@ -47,8 +47,9 @@ function Editor() {
                 </span>
                 <br />
                 <div className="dropdown mt-1">
+                    <b>Font Color</b>
                     <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Font Color
+                        Select
                     </button>
                     <ul className="dropdown-menu">
                         <li><button type="button" onClick={() => setFontColor('blue')} className="btn btn-primary">Blue</button></li>
@@ -61,7 +62,6 @@ function Editor() {
                         <li><button type="button" onClick={() => setFontColor('black')} className="btn btn-dark">Black</button></li>
                     </ul>
                 </div>
-                <button type="button" className="btn btn-primary mt-1 apply translate">Apply</button>
             </span>
         </div>
     );
