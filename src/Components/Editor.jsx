@@ -21,6 +21,7 @@ function Editor() {
                     id="fontlist" 
                     value={fontFamily} 
                     onChange={(e) => setFontFamily(e.target.value)}
+                    className='mt-2'
                 >
                     <option value="Roboto, sans-serif">Roboto</option>
                     <option value="Montserrat, sans-serif">Montserrat</option>
@@ -32,7 +33,7 @@ function Editor() {
                     <option value="Tiny5">Tiny5</option>
                 </select>
                 <br />
-                <span id="sizee">
+                <span id="sizee" >
                     <b>Font Size:</b>
                     <select 
                         id="sizelist" 
@@ -45,7 +46,7 @@ function Editor() {
                     </select>
                 </span>
                 <br />
-                <div className="dropdown">
+                <div className="dropdown mt-1">
                     <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Font Color
                     </button>
@@ -60,7 +61,7 @@ function Editor() {
                         <li><button type="button" onClick={() => setFontColor('black')} className="btn btn-dark">Black</button></li>
                     </ul>
                 </div>
-                <button type="button" className="btn btn-primary apply translate">Apply</button>
+                <button type="button" className="btn btn-primary mt-1 apply translate">Apply</button>
             </span>
         </div>
     );
