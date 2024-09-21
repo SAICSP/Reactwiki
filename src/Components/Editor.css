@@ -1,0 +1,23 @@
+.editor {
+    border: 2px solid black;
+    width: 300px;
+    height: auto;
+    align-self: end;
+    position: absolute;
+    top: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #F5E556;
+    border-radius: 15px;
+    margin-left: 800px;
+    text-align: center;
+    
+}
+
+.editor:hover {
+    box-shadow: 16px 16px 15px black;
+    transition: ease-in-out 0.6s;
+    background-color: black;
+    color: #fff;
+
+}

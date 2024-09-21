@@ -1,0 +1,73 @@
+/* Main container layout */
+.maininfo {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+
+.infoleft {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    position: relative;
+    /* To allow absolute positioning if needed */
+}
+/* Infoleft section with two cards side by side */
+.infoleft {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.infoleft .cardinfo {
+    flex: 0 0 calc(50% - 10px); /* Each card takes 50% width minus small margin */
+    box-sizing: border-box;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.infoleft .cardinfo:last-child {
+    margin-right: 0; /* Remove margin for the last card */
+}
+
+.cardinfo img {
+    height: 70px;
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+.cardinfo p {
+    text-align: center;
+}
+
+.cardinfo a {
+    text-decoration: none;
+}
+
+/* Inforight section with 3 cards per row */
+.inforight {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cardbox {
+    flex: 0 0 calc(33.33% - 20px); /* Each card takes up 1/3 of the row minus gap */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cardbox img {
+    height: 45px;
+    width: 45px;
+    margin-bottom: 10px;
+}
+
+.cardbox a {
+    text-decoration: none;
+}
+
+.cardbox:hover {
+    border: 2px solid black; /* Optional hover effect */
+}
