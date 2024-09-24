@@ -32,7 +32,7 @@ nav {
     /* Remove left margin on mobile */
     width: 80%;
     /* Make button width responsive */
-    max-width: 150px;
+    max-width: 100px;
     /* Set a max-width for the button */
 }
 
@@ -108,4 +108,15 @@ h3 {
         flex-direction: row;
         /* Arrange side by side on larger screens */
     }
+}
+
+.input-button-container {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+}
+
+#searchInput {
+    margin-right: 10px;
+    /* Adds space between input and button */
 }

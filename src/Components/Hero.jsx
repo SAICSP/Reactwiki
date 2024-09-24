@@ -81,19 +81,21 @@ function Hero() {
             <div className="search">
     <nav className="navbar navbar-expand-lg">
         <form className="d-flex" role="search" onSubmit={handleSearch}>
-            <input
-                className="form-control me-2"
-                id="searchInput"
-                type="search"
-                placeholder="Search on Wikipedia"
-                aria-label="Search"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-            />
-            <div id="google_translate_element"></div>
-            <button type="submit" className="btn btn-primary searchBtn">
-                <i className="fa-solid fa-magnifying-glass"></i>
-            </button>
+            <div className="input-button-container">
+                <input
+                    className="form-control me-2"
+                    id="searchInput"
+                    type="search"
+                    placeholder="Search on Wikip"
+                    aria-label="Search"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                />
+                <div id="google_translate_element"></div>
+                <button type="submit" className="btn btn-primary searchBtn">
+                    <i className="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
         </form>
     </nav>
     <div id="searchResults" className={`mt-4 mb-5 ${showResults ? 'show' : ''}`}>

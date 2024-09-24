@@ -20,17 +20,28 @@ function Info2() {
         { imgSrc: "metawiki.png", title: "Meta-Wiki", description: "Community coordination & documentation" },
     ];
 
+    // Animation variants for the container and items
+    const containerVariants = {
+        hidden: { opacity: 0, transition: { staggerChildren: 0.3 } },
+        visible: { opacity: 1, transition: { staggerChildren: 0.3 } },
+    };
+
     const cardVariants = {
         hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
     };
 
     return ( 
-        <div className="container">
+        <motion.div 
+            className="container"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+        >
             <div className="inforight">
                 {cardData.map((card, index) => {
                     const { ref, inView } = useInView({
-                        threshold: 0.1, // Adjust this value to control when the card is considered in view
+                        threshold: 0.1,
                     });
 
                     return (
@@ -40,7 +51,7 @@ function Info2() {
                             className="cardbox"
                             variants={cardVariants}
                             initial="hidden"
-                            animate={inView ? "visible" : "hidden"}
+                            animate={inView ? 'visible' : 'hidden'}
                         >
                             <img src={card.imgSrc} alt={`${card.title} logo`} />
                             <a href="#">{card.title}</a>
@@ -49,7 +60,7 @@ function Info2() {
                     );
                 })}
             </div>
-        </div>
+        </motion.div>
     );
 }
 

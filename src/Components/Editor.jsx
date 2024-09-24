@@ -33,7 +33,7 @@ function Editor() {
                     <option value="Tiny5">Tiny5</option>
                 </select>
                 <br />
-                <span id="sizee" >
+                <span id="sizee">
                     <b>Font Size:</b>
                     <select 
                         id="sizelist" 
@@ -46,22 +46,24 @@ function Editor() {
                     </select>
                 </span>
                 <br />
-                <div className="dropdown mt-1">
-                    <b>Font Color</b>
-                    <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Select
-                    </button>
-                    <ul className="dropdown-menu">
-                        <li><button type="button" onClick={() => setFontColor('blue')} className="btn btn-primary">Blue</button></li>
-                        <li><button type="button" onClick={() => setFontColor('gray')} className="btn btn-secondary">Gray</button></li>
-                        <li><button type="button" onClick={() => setFontColor('green')} className="btn btn-success">Green</button></li>
-                        <li><button type="button" onClick={() => setFontColor('red')} className="btn btn-danger">Red</button></li>
-                        <li><button type="button" onClick={() => setFontColor('yellow')} className="btn btn-warning">Yellow</button></li>
-                        <li><button type="button" onClick={() => setFontColor('aqua')} className="btn btn-info">Aqua</button></li>
-                        <li><button type="button" onClick={() => setFontColor('white')} className="btn btn-light">White</button></li>
-                        <li><button type="button" onClick={() => setFontColor('black')} className="btn btn-dark">Black</button></li>
-                    </ul>
-                </div>
+                <span id="color">
+                    <b>Font Color:</b>
+                    <select
+                        id="colorlist"
+                        value={fontColor}
+                        onChange={(e) => setFontColor(e.target.value)}
+                        className="mt-2"
+                    >
+                        <option value="black">Black</option>
+                        <option value="blue">Blue</option>
+                        <option value="gray">Gray</option>
+                        <option value="green">Green</option>
+                        <option value="red">Red</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="aqua">Aqua</option>
+                        <option value="white">White</option>
+                    </select>
+                </span>
             </span>
         </div>
     );
