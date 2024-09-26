@@ -86,7 +86,7 @@ function Hero() {
                     className="form-control me-2"
                     id="searchInput"
                     type="search"
-                    placeholder="Search on Wikip"
+                    placeholder="Search on Wiki"
                     aria-label="Search"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
